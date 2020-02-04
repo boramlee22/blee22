@@ -1,3 +1,15 @@
+ /**
+* Quiz 1 focuses on variables and control structures
+*
+* @category    Quiz 1
+* @author      Chad Banks <crbanks1@hfcc.edu>
+* @author      Boram
+* @date        2020.01.30
+* @link
+* @grade       10 / 10
+*/
+
+
 // 1. Define a constant named favBook that holds the name of your favorite book.
 //      Also define a standard variables called favInt that contains your favorite int.
 
@@ -39,7 +51,7 @@ for (var i =0; i <8; i++)
 }
 
 
-
+// -1.5 pt
 // 4. Write a while loop that iterates until favInt is less than or equal to -42.
 //      Inside the loop, write an if that will send a console error if favInt is 0.
 //      The console error should read "ZERO DETECTED!"
@@ -49,14 +61,18 @@ while (j <= 42)
 {
     j++;
     console.log("whileloop:",j);
-    else(j=0)
+    //else(j=0)
+    if (j == 0)
+    {
+        console.log("ZERO DETECTED!");
+    }
 }
 
 
 
 
 
-// 2 ex pts
+// 1.5/2 ex pts
 // 5. Write  for you favBook that meets the following bookname conditions.
 //      "The Matrix" should console log "Excellent Movie!"
 //      "Tears Of Steel" should log "I love open source!"
@@ -70,7 +86,7 @@ while (j <= 42)
         console.log(favBook +"should console log Excellent Movie!");
         break;
     case "Tears of Steel":
-        console.log(favBook +"should console log I love open source!"');
+        console.log(favBook +"should console log I love open source!");
         break;
 
 

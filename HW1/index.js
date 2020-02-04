@@ -1,3 +1,13 @@
+ /**
+* HW 1 focuses on variables and control structures
+*
+* @category    HW 1
+* @author      Chad Banks <crbanks1@hfcc.edu>
+* @author      Boram
+* @date        2020.01.30
+* @link
+* @grade       10 / 10
+*/
 
 let name = "Boram Lee";
 let major = "CIS";
@@ -50,10 +60,10 @@ while (j <21)
 let myname = "boram";
 consol.log("Welcome" + myname + major + ".");
 
-if (myname === "Mr.Banks") ;
+if (myname === "Mr.Banks")
 {
 
-    { console.log("Welcome back Professor!");}
+    console.log("Welcome back Professor!");
 }
 else
 {
