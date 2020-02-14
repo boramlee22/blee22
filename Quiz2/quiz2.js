@@ -12,14 +12,17 @@
 // 1. Define a function that take two arguments, you can choose the name.
 //      The function should them multiply them together and return the result
 
-function multiply (price_item, qty) {
-    return price_item*qty;
-
-    var product=MULTIPLY(1500, 2);
-
+function getTotalPrice (x, y) {
+    var x = price_item;
+    var y = qty;
 
 
+    return x * y;
+}
 
+
+
+document.write(getTotalPrice(1500,4);
 
 
 // 2 pts
