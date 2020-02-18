@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter</title>
+</head>
+<body>
+
+    <form name ="Twitter">
+        <input type="text" id="display"  style="border:2px solid black">
+
+        <p>
+            <input type="button" value="tweet" onclick="tweetBuilder('tweet')">
+
+        </p>
+
+
+    <script>
+
+        function tweetBuilder() {
+
+            var inputVal = document.getElementById("display").value;
+
+            alert(inputVal);
+            }
+
+    </script>
+        <script src="tweet.js" ></script>
+
+</body>
+</html>
