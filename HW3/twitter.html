@@ -6,11 +6,47 @@
 </head>
 <body>
 
+
+
     <form name ="Twitter">
-        <input type="text" id="display"  style="border:2px solid black">
+        <p>
+            <input type="button" value="        Id       " onclick="('id')">
+            <input type="text" id="id"  style="border:2px solid black">
+
+        </p>
+
+        <p>
+            <input type="button" value="  Message  " onclick="('msg')">
+            <input type="text" id="message"  style="border:2px solid black">
+        </p>
+
+        <p>
+            <input type="button" value="     Likes     " onclick="('likes')">
+            <input type="text" id="likes"  style="border:2px solid black">
+        </p>
+
+        <p>
+            <input type="button" value="   Shares    " onclick="('shares')">
+            <input type="text" id="shares"  style="border:2px solid black">
+        </p>
+
+        <p>
+            <input type="button" value=" Comments " onclick="('comments')">
+            <input type="text" id="comments"  style="border:2px solid black">
+        </p>
+
+        <p>
+            <input type="button" value=" Username " onclick="('username')">
+            <input type="text" id="usename"  style="border:2px solid black">
+        </p>
 
         <p>
             <input type="button" value="tweet" onclick="tweetBuilder('tweet')">
+
+        </p>
+
+        <p>
+            <input type="button" value="Dump Tweet Collection" onclick="tweetBuilder('tweet')">
 
         </p>
 
@@ -19,9 +55,8 @@
 
         function tweetBuilder() {
 
-            var inputVal = document.getElementById("display").value;
+            var inputVal = document.getElementById("id").value;
 
-            alert(inputVal);
             }
 
     </script>
