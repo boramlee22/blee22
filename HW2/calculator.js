@@ -1,3 +1,7 @@
+/**
+ * Grade    : 10 / 10
+ **/
+
 function _(x) {
     return document.getElementById(x);
 }
