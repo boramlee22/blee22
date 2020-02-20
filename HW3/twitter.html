@@ -8,7 +8,6 @@
 
 
 
-    <form name ="Twitter">
 
         <label for="id" >ID:</label>
         <input type="text" id="id" >
@@ -29,7 +28,7 @@
         <input type="text" id="username" >
 
         <br><br>
-        <input type = button value = "Tweet" onclick = "dateTime();">
+        <input type = button value = "Tweet" onclick = "tweetBuilder();">
         <div id = tweet><</div>
 
         <script type = "text/javascript">
@@ -40,8 +39,8 @@
 
         <br>
 
-        <input type = button value = "Dump Tweet Collection" onclick = "consolelog">
-        <div id = tweet><</div>
+        <button id ="tweetcollection" onclick = "dump();">Dump Tweet Collection</button>
+
 
 
 

@@ -1,13 +1,10 @@
 
 
+let tweetCollection = [];
 
 
-let tweetCollection = { 'id', 'message', 'likes', 'shares', 'comments', 'username'};
 
-
-tweetCollection.firstpage = [];
-
-tweetCollection.tweetBuilder = function(){
+let tweetBuilder = function(){
 
     let tweetUsing = { };
 
@@ -17,13 +14,20 @@ tweetCollection.tweetBuilder = function(){
     tweetUsing.shares   = document.getElementById('shares').value;
     tweetUsing.comments = document.getElementById('comments').value;
     tweetUsing.username = document.getElementById('username').value;
+    tweetUsing.date = new Date();
 
-    tweetCollection.firstpage.push(tweetUsing);
+    tweetCollection.push(tweetUsing);
     console.log(tweetUsing);
 
 }
 
-let tweetBuilderBtn = document.getElementById("tweet");
+let dump = function(){
+
+    console.log(tweetCollection);
+
+
+}
+let tweetBuilderBtn = document.getElementById("tweetcollection");
 tweetBuilderBtn.addEventListener( "click", tweetCollection.tweetBuilder );
 
 
@@ -32,4 +36,3 @@ tweetBuilderBtn.addEventListener( "click", tweetCollection.tweetBuilder );
 
 
 
-console.log(tweetCollection.firstpage);
