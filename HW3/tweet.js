@@ -2,10 +2,10 @@
 
 
 
-let tweetCollection = { };
+let tweetCollection = { 'id', 'message', 'likes', 'shares', 'comments', 'username'};
 
 
-tweetCollection.firstpage = ['id', 'message', 'likes', 'shares', 'comments', 'username'];
+tweetCollection.firstpage = [];
 
 tweetCollection.tweetBuilder = function(){
 
@@ -27,7 +27,7 @@ let tweetBuilderBtn = document.getElementById("tweet");
 tweetBuilderBtn.addEventListener( "click", tweetCollection.tweetBuilder );
 
 
-var tweetCollection.firstpage = require
+
 
 
 
