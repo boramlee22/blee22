@@ -9,57 +9,42 @@
 
 
     <form name ="Twitter">
-        <p>
-            <input type="button" value="        Id       " onclick="('id')">
-            <input type="text" id="id"  style="border:2px solid black">
 
-        </p>
+        <label for="id" >ID:</label>
+        <input type="text" id="id" >
+        <br>
+        <label for="message" >Message:</label>
+        <input type="text" id="message" >
+        <br>
+        <label for="likes" >Likes:</label>
+        <input type="text" id="likes" >
+        <br>
+        <label for="shares" >Shares:</label>
+        <input type="text" id="shares" >
+        <br>
+        <label for="comments" >Comments:</label>
+        <input type="text" id="comments" >
+        <br>
+        <label for="username" >Username:</label>
+        <input type="text" id="username" >
 
-        <p>
-            <input type="button" value="  Message  " onclick="('msg')">
-            <input type="text" id="message"  style="border:2px solid black">
-        </p>
+        <br><br>
+        <input type = button value = "Tweet" onclick = "dateTime();">
+        <div id = tweet><</div>
 
-        <p>
-            <input type="button" value="     Likes     " onclick="('likes')">
-            <input type="text" id="likes"  style="border:2px solid black">
-        </p>
-
-        <p>
-            <input type="button" value="   Shares    " onclick="('shares')">
-            <input type="text" id="shares"  style="border:2px solid black">
-        </p>
-
-        <p>
-            <input type="button" value=" Comments " onclick="('comments')">
-            <input type="text" id="comments"  style="border:2px solid black">
-        </p>
-
-        <p>
-            <input type="button" value=" Username " onclick="('username')">
-            <input type="text" id="usename"  style="border:2px solid black">
-        </p>
-
-        <p>
-            <input type="button" value="tweet" onclick="tweetBuilder('tweet')">
-
-        </p>
-
-        <p>
-            <input type="button" value="Dump Tweet Collection" onclick="tweetBuilder('tweet')">
-
-        </p>
-
-
-    <script>
-
-        function tweetBuilder() {
-
-            var inputVal = document.getElementById("id").value;
-
+        <script type = "text/javascript">
+            function dateTime() {
+                document.getElementById('tweet').innerHTML=Date ();
             }
+        </script>
 
-    </script>
+        <br>
+
+        <button id="dumptweet">Dump Tweet Collection</button>
+
+
+
+
         <script src="tweet.js" ></script>
 
 </body>
