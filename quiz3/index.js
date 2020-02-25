@@ -1,3 +1,5 @@
+// Grade: 5 / 10
+
 
 // 1. Define an object called SiteUser.
 
@@ -33,16 +35,19 @@ addItemToCartBtn.addEventListener("click",website.addItemToCart );
 
 
 
-// 2 pts
+// 0/2 pts
 // 3. Add a function to the SiteUser object called addVisit.
 //      This function should increase the Visits property by 1.
+SiteUser.addVisit = function()
+{
+    SiteUser.Visits++;
+}
 
-
-// 3 pts
+// 0/3 pts
 // 4. Call the addVisit method of the SiteUser object.
+SiteUser.addVisit();
 
-
-// 2 ex pt
+// 0/2 ex pt
 // B. Add a function to the SiteUser object called addItemToCart.
 //      This function should take an argument called item.
 //      This function should then add that item to the cart array.

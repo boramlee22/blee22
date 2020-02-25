@@ -1,4 +1,4 @@
-
+// Grade: 10 / 10
 
 let tweetCollection = [];
 
