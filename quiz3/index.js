@@ -51,4 +51,10 @@ SiteUser.addVisit();
 // B. Add a function to the SiteUser object called addItemToCart.
 //      This function should take an argument called item.
 //      This function should then add that item to the cart array.
+let item = "grocery";
 
+addItemToCart : function (item){
+    siteUser.Cart.push(item);
+}
+
+siteUser.addItemToCart(item"grocery");
