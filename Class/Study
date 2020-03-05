@@ -64,3 +64,77 @@ console.log(functionName(1,2))
 
 //parameters = allows functions to accept input and perform a task using inputs.
 
+
+function calculateArea (width, height){
+    console.log(width*height);
+    return calculateArea;
+}
+
+
+calculateArea();  // calling the function
+
+
+
+try {
+    throw new Error("Error test.");
+      if(x == "")  throw "값을 입력하세요";
+            if(isNaN(x)) throw "숫자가 아닙니다.";
+            x = Number(x);
+            if(x < 5)    throw "너무 작은 값입니다.";
+            if(x > 10)   throw "너무 큰 값입니다.";
+
+
+
+}
+
+catch(error){
+alert(예외가 발생했을 떄 실행할 코드 작성)
+  message.innerHTML = err;
+
+
+
+}
+
+
+
+
+   try catch문을 구성하고 아래와 같은 사용자 정의 오류를 발생할 수 있도록 함수를 생성하시오.
+
+
+
+
+
+입력값                               사용자 정의 오류
+
+양수                            양수가 입력되었습니다
+
+음수                           음수가 입력되었습니다
+
+
+
+
+   function func(input){
+
+      try {
+
+         if (input > 0){
+
+            throw "양수가 입력되었습니다";
+
+         }
+
+         else if (input < 0){
+
+            throw "음수가 입력되었습니다";
+         }
+
+      }
+
+      catch (err){
+
+         document.write(err + "<br>");
+      }
+
+   }
+
+
