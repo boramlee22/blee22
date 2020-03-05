@@ -1,0 +1,66 @@
+
+object = a collection of data and actions (a collection of related data)
+
+Null vs Undefined?
+Null= There is no value at all
+Undefined = Declared variable lacks a value
+
+variable = container  for a value
+
+
+
+let myName = 'Boram';
+
+console.log(`My name is ${myName}.`   // the value of myName is inserted into the template literals.
+
+
+$$ === and
+|| === or
+!  === not
+
+
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+
+
+
+switch (if there are more than 4 conditions, better to use switch)
+
+swirch (parameter){
+    case 'a':
+        console.log();
+        break;
+    case 'b':
+        console.log();
+        break;
+    case 'c':
+         console.log();
+         break;
+    case 'd':
+         console.log();
+         break;
+    default:
+        consol.log();
+        break;
+
+}
+
+
+function functionNmae(parameters1, parameters2) {
+       console.log();
+}
+
+
+
+
+function functionName(P1, P2){
+    var someThing = v1 +v2
+}
+
+console.log(functionName(1,2))
+
+
+
+
+//parameters = allows functions to accept input and perform a task using inputs.
+
