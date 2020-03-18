@@ -39,29 +39,3 @@ try {
 
 
 
-
-
-function checkdate(e, obj, errMsgSel){
-    var sendDate =obj.value;
-
-    sendDate = (new Date()).fromString(sendDate);
-    if (sendDate == null) {
-       if (e.type == 'blur') {
-           obj.value = '';
-        }
-        return;
-    }
-    today = new Date();
-
-    if (sendDate < today) {
-        alert('The  date can\'t be in the past. Please pick another date.');
-
-       document.getElementById(errMsgSel).innerHTML = 'The  date can\'t be in the past. Please pick another date.';
-        return false;
-    }
-    else
-    {
-       document.getElementById(errMsgSel).innerHTML = '';
-    }
-}        $(function () {
-});
