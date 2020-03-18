@@ -22,9 +22,9 @@ try {
             {
                 document.getElementById(Emessage).innerHTML = <span style=”color:red;”>Sorry, an error occurred!</span>;
             }
-        }        $checkDate();
+        }
 
-
+        $checkDate();
 
 
 
