@@ -1,0 +1,24 @@
+
+let factory = {};
+
+factory.showRoom = [];
+
+factory.makeCar = function()
+{
+    let car = {};
+
+    car.topSpeed    = 100;
+    car.color       = document.getElementById('carColor').value;
+    car.make        = document.getElementById('carMake').value;
+    car.model       = document.getElementById('carModel').value;
+    car.price       = document.getElementById('carPrice').value;
+    car.dashboard   = fridge[0];
+
+    fridge.shift();
+
+    factory.showRoom.push(car);
+    console.log(car);
+};
+
+let makeCarBtn = document.getElementById("createCar");
+makeCarBtn.addEventListener( "click", factory.makeCar );
