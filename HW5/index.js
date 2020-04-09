@@ -1,4 +1,7 @@
-
+/**
+ * Homework 5
+ * @grade		8 / 10
+ */
 let ErrorHandler = {
    
     init: function () {
@@ -11,7 +14,6 @@ let ErrorHandler = {
         alert('check');
 
     },
-
     checkDate: function () {
         try {
             console.log('Clicked');
@@ -27,48 +29,48 @@ let ErrorHandler = {
             let happyMessage = '"Welcome to class!';
             let errorMessage = '<span style="color:red;">Sorry, an error occurred!</span>';
 
-            if (today.getDate() == ){
+            if (today.getDay() === 2 || today.getDay() === 4) {
 
-            alert(happyMessage)
-            }else  (today.getDate() !== ){
+                alert(happyMessage)
+            } else
+            {
 
-            alert ("Enjoy your day off!")
+                alert("Enjoy your day off!")
             }
 
 
         } catch (e) {
             condole.error(e);
-        },
-
-        checkTime: function () {
-            try {
-
-
-                var today = new Date();
-                var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-                var dateTime = date + ' ' + time;
+        }
+    },
+    checkTime: function () {
+        try {
 
 
-
-                let happyMessage = '"Welcome to class!';
-                let errorMessage = '<span style="color:red;">Sorry, an error occurred!</span>';
-
-                if (today.getMinutes() %2 === 0){
-
-                   document.getElementById('timecheck').innerHTML = (happyMessage);
-
-                }
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + ' ' + time;
 
 
-            } catch (err) {
-                document.getElementById('timecheck').innerHTML = err.message;
+            let happyMessage = '"Welcome to class!';
+            let errorMessage = '<span style="color:red;">Sorry, an error occurred!</span>';
+
+            if (today.getMinutes() % 2 === 0) {
+
+                document.getElementById('timecheck').innerHTML = (happyMessage);
+
             }
 
 
-    };
+        } catch (err) {
+            document.getElementById('timecheck').innerHTML = err.message;
+        }
 
-    window.onload =  ErrorHandler.init;
+    }
+};
+
+window.onload =  ErrorHandler.init;
 
 
 

@@ -1,3 +1,7 @@
+/**
+ * Homework 4
+ * @grade		8 / 10
+ */
 var PageManager = {
 
 
@@ -21,24 +25,29 @@ var PageManager = {
     inputDiv : function()
 
     {
-        var div = document.getElementById(appdiv);
+        var div = document.getElementById('appdiv');
         var text = document.getElementById('text2');
-        div.appendChild('text');
-       document.body.appendChild('div');
+        //div.appendChild('text');
+        //document.body.appendChild('div');
 
-        //document.getElementById('appDiv').innerHTML += document.getElementById('text2');
+        div.innerHTML += document.getElementById('text2').value;
     },
 
     consoleObject: function ()
     {
         console.log(PageManager);
-    },
-
-    var select = document.getElementById('dropdown');
-    select.addEventListener('change',function(){
-        if (select.value ==='white'){
-            select.style.backgroundColor = "white";
-        }
     }
+
+
 };
 window.onload = PageManager.init;
+
+
+// Cannot put code inside an object, unless it is inside a method
+var select = document.getElementById('dropdown');
+select.addEventListener('change',function(){
+    var select = document.getElementById('dropdown');
+    if (select.value ==='white'){
+        select.style.backgroundColor = "white";
+    }
+});
