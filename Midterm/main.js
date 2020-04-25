@@ -1,5 +1,12 @@
-
-
+/**
+ * Midterm Examination
+ *
+ * @category    Midterm Exam
+ * @author      Chad Banks <crbanks1@hfcc.edu>
+ * @date        2020.03.05
+ * @grade       70 / 100
+ * @notes       
+ */
 
 let Blueit = {
 
@@ -25,18 +32,14 @@ let Blueit = {
     {
         Blueit.sendVoteToApi( e.target.id, -1 );
     },
-
-    try{
-        if(true)
-}
-
-            catch(e){
-        sendVoteToApi: function (buttonId, Value) {
+    sendVoteToApi: function (buttonId, Value) {
+        try {
             // Value can be 1 or negative one
             $.ajax(Blueit.siteApiUrl, {action: "vote", pid: buttonId, val: Value});
-
+        }catch(e) {
             console.error("Error occured ", e);
             throw e;
+        }
     },
 
     sendNewPostToApi: function( dataObj )

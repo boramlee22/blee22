@@ -9,26 +9,19 @@ let submitPost = {
         SubmitHandler.myDiv = document.getElementById('text1').value;
 
 
-        handleNewButton : (function () {
-            var txt = document.getElementById('text1').value;
-            myHoverBtn.addEventListener("click", input);
-        });
+        myHoverBtn.addEventListener("click", submitPost.handleNewButton);
 
-        function input(val){
-            _('display').value = eval(_('display').value);
-        }
-
+    },
+    handleNewButton : function () {
+        Blueit.sendNewPostToApi();
     }
 
 };
 
-$.getScript("main.js",function(){
-    sendNewPostToApi();
-}
-);
+// $.getScript("main.js",function(){
+//     sendNewPostToApi();
+// });
 
-
-
-    window.onload = submitPost.init;
+window.onload = submitPost.init;
 
 

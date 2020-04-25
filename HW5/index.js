@@ -1,41 +1,76 @@
-try {
-    let ErrorHandler = {
+/**
+ * Homework 5
+ * @grade		8 / 10
+ */
+let ErrorHandler = {
+   
+    init: function () {
 
-        init: checkDate = function () {
-            let checkDateBtn = document.getElementById("date");
-            checkDateBtn.addEventListener(type : "click", ErrorHandler.checkDate);
-            alert('check');
+        console.log('Hello');
+
+        let checkDateBtn = document.getElementById('dateTime');
+        checkDateBtn.addEventListener("click", ErrorHandler.checkDate);
+        checkDateBtn.addEventListener("click", ErrorHandler.checkTime);
+        alert('check');
+
+    },
+    checkDate: function () {
+        try {
+            console.log('Clicked');
 
 
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + ' ' + time;
 
-            date = new Date();
-            var curDate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
-            var curTime = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-            var dateTime = curDate+' '+curTime;
+            console.log('Today:', dateTime);
 
-            if (date.getDate ==  today) {
-                var txt ="Welcome to class!";
-                document.getElementById(Hmessage).innerHTML = '';
-                return false;
-            }
-            else
+            let happyMessage = '"Welcome to class!';
+            let errorMessage = '<span style="color:red;">Sorry, an error occurred!</span>';
+
+            if (today.getDay() === 2 || today.getDay() === 4) {
+
+                alert(happyMessage)
+            } else
             {
-                document.getElementById(Emessage).innerHTML = <span style=”color:red;”>Sorry, an error occurred!</span>;
+
+                alert("Enjoy your day off!")
             }
+
+
+        } catch (e) {
+            condole.error(e);
         }
+    },
+    checkTime: function () {
+        try {
 
-        $checkDate();
+
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + ' ' + time;
 
 
+            let happyMessage = '"Welcome to class!';
+            let errorMessage = '<span style="color:red;">Sorry, an error occurred!</span>';
 
+            if (today.getMinutes() % 2 === 0) {
+
+                document.getElementById('timecheck').innerHTML = (happyMessage);
+
+            }
+
+
+        } catch (err) {
+            document.getElementById('timecheck').innerHTML = err.message;
         }
-
 
     }
-    window.onload = ErrorHandler.init;
-}catch (e) {
-    condole.error(e);
-}
+};
+
+window.onload =  ErrorHandler.init;
 
 
 
