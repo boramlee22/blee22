@@ -5,37 +5,35 @@
 * @author      Chad Banks <crbanks1@hfcc.edu>
 * @author      Boram Lee <blee22@hawkmail.hfcc.edu>
 * @date        2020.04.23
-* @grade
+* @grade        9 / 10
 */
 
-// 2 pts
+// 1.5 / 2 pts
 // 1. Using JS or jQuery, create a variable called xp and use it to store the data-xp attribute value in the div below.
 // <div data-xp="95" ></div>
 
-let xp = $('div');
-let dataXp = xp.data();
-xp.append(dataXp.xp);
+let xp = $('div').data('xp');
+//let dataXp = xp.data();
+//xp.append(dataXp.xp);
 
 
-// 3 pts
+// 2 / 3 pts
 // 2. Create a localStorage key called plyrXp and store the value from the xp variable created above in it.
+localStorage.setItem('plyrXp', xp);
 
-let plyrXp = localStorage.setItem(' data-xp', '95');
 
-
-// 2 pts
+// 1.5 / 2 pts
 // 3. Pull the value for plyrXp out of localStorage, and store it in a variable called loadedXp.
-
-let loadedXp = localStorage.getItem('data-xp');
+let loadedXp = localStorage.getItem('plyrXp');
 
 if (!loadedXp)
     localStorage.setItem(' data-xp', '95');
 
 
-// 3 pts
+// 3 / 3 pts
 // 4. Create a cookie called "email" and store the string "crbanks1@hfcc.edu" in it, this cookie should expire in 30 days.
 
-setCookie : function (cname, cvalue, exdays){
+function setCookie(cname, cvalue, exdays){
 
 document.cookie =  cname + "=" + cvalue + ";" + expires + ";path=/";
 },
@@ -46,7 +44,7 @@ setCookie("email", "cbanks1@hfcc.edu", 30);
 
 }
 
-// 1 pt
+// 1 / 1 pt
 // E. Create a sessionStorage key called "session-page-visits" and store the number "42" in it.
 
 let session-page-visits = sessionStorage.setItem(' session-page-visits', '42');
