@@ -1,3 +1,5 @@
+// Grade: 10 / 10
+
 let PageHandler = {
 
     pageDiv : null,
@@ -28,7 +30,10 @@ let PageHandler = {
         $('#showBtn').on( "click", PageHandler.showDiv);
 
 
-
+        // Did this help?
+        $('#tojQuery').click(function() {
+            window.open('https://api.jquery.com/');
+        });
     },
     showDiv : function( event )
     {
@@ -46,9 +51,6 @@ let PageHandler = {
     },
 
 
-    $('#tojQuery').click(function() {
-    window.open('https://api.jquery.com/');
-});
 
 };
 
