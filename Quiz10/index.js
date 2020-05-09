@@ -32,24 +32,42 @@ var  discordUser = JSON.parse('{"uid":64029,"name":"Jon","age":47,"type":"paid",
 //          If any of these are false, then throw an Error.
 
   checkType =  function ()
-  {
+    {
 
-      try {
-          if (discordUser.uid === Number.isInteger && discordUser.age ===Number.isInteger) //I'm not sure for this line.
-          {
-              console.log("uid & age are number.");
-              throw new Error ("Should be number.")
-          } else if (discordUser.name !== Number.isInteger && discordUser.type !==Number.isInteger) {
-              console.log("name & type are string!");
-              throw new Error ("Should be string.")
-          }
-      }catch(e)
-      {
-          console.error( "Error:", e.message );
-      }
+        try {
+            if (typeof discordUser.uid !== "string" && typeof discordUser.age !=="string")
+            {
+                console.log("uid & age are number.");
 
-      };
+            } else
+                throw new Error ("uid & age are string!");
 
+
+        }catch(e)
+        {
+            console.error( "Error:", e.message );
+        }
+
+    };
+
+    checkStrType =  function ()
+    {
+
+        try {
+            if (typeof discordUser.name == "string" && typeof discordUser.games =="string")// I'm not sure for this line. How to check the type of properties in Array?
+            {
+                console.log("name & games are string.");
+
+            } else
+                throw new Error ( "name & games are number!");
+
+
+        }catch(e)
+        {
+            console.error( "Error:", e.message );
+        }
+
+    };
 
 
 
