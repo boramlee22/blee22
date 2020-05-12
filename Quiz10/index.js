@@ -7,7 +7,7 @@
  * @author      Chad Banks <crbanks1@hfcc.edu>
  * @author      Boram Lee <blee22@hawkmail.hfcc.edu>
  * @date        2020.05.07
- * @grade
+ * @grade       10 / 10
  */
 
 
