@@ -7,6 +7,8 @@ var hw8 = {
 
         var API = document.getElementById('API');
         API.addEventListener('click', hw8.onAPIRequest);
+
+
     },
 
     onReadFile : function (url){
@@ -23,23 +25,20 @@ var hw8 = {
     },
     onAPIRequest: function( response )
     {
-        var API_KEY ="5c366a97e5146bac88cfcbc65707ed79";
+        //var APIKEY = "5c366a97e5146bac88cfcbc65707ed79"
+        //var APIURL = `https://api.openweathermap.org/data/2.5/weather?q={busan}&appid={APIKEY}`;
 
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}`
-        ).then(function(json){
-            return response.json();
-        })
-            .then(function(jason){
-                const temperature = json.main.temp;
-                const place = json.name;
-                document.getElementById("output").innerText= `${temperature} @ ${place}`;
-            });
-
-
-
+        $.ajax({
+            url: "https://api.openweathermap.org/data/2.5/weather?q=Livonia&appid=5c366a97e5146bac88cfcbc65707ed79",
+            method: 'POST',
+            success: (data) => {
+                var tempr = String((data.main.temp-273)).substring(0, 3); //Celsius
+                var location = data.name;
+                $('#output').append('City：' +location +" "+' Temperature：' + tempr + '\n');
+            }
+        });
 
     }
-
 
 };
 
