@@ -1,108 +1,87 @@
 
-var PageManager;
-PageManager = {
+
+var PageManager = {
 
     init : function () {
 
-        let myBtn1 = document.getElementById('btn1');
-        myBtn1.addEventListener("click", PageManager.changeText);
 
-        PageManager.myBtn2 = document.getElementById('btn2');
-        PageManager.myBtn2.addEventListener("click", PageManager.inputDiv);
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click",PageManager.changeH1);
 
-        PageManager.myBtn3 = document.getElementById('btn3');
-        PageManager.myBtn3.addEventListener("click", PageManager.consoleObject );
+        var btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click",PageManager.appendDiv);
 
-       // PageManager.changeColor = document.getElementById('bgcolor');
-        //PageManager.changeColor.addEventListener( 'change', PageManager.updateColor )
+        var btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click",PageManager.conLog);
 
-        let backgroundColor = localStorage.getItem('background-color');
+        var select = document.getElementById("dropdown");
+        select.addEventListener("change", PageManager.bgcolor);
 
-        if (!bgcolor)
-            localStorage.setItem("background-color", "white");
-        $('body').css("background-color", bgcolor);
+        localStorage.setItem("background-color","white")
 
-        $('#bgcolor').value = bgcolor;
+        var cookies =  cookieManager.getCookies();
 
-        let selectBox = document.getElementById('bgcolor');
-        selectBox.addEventListener('change', PageManager.updateColor);
+        cookieManager.setCookie("Email", "blee22@hfcc.edu", 60);
+        cookieManager.setCookie("Name", "Boram");
+        cookieManager.setCookie("Class", "CIS-172");
+        cookieManager.setCookie("Date", new Date);
+        cookieManager.setCookie("Movie", "The Matrix");
 
-
-        let ls = document.getElementById('clicker');
-        ls.addEventListener('click', PageManager.clicks);
-
-
-        let cookies = cookieManager.getCookies();
-
-        cookieManager.setCookie("Boram Lee"; cclass: "CIS-172" cemail:"blee22@hawkmail.hfcc.edu", cdate, cmovie:"Matrix");
+        let click = document.getElementById('clicker');
+        click.addEventListener('click', PageManager.onClicks);
 
 
 
     },
+    changeH1 : function() {
+        var text = document.getElementById("text1");
+        document.getElementById("h1").innerHTML = text.value;
 
-    changeText : function (event) {
-        let textBox = document.getElementById('text1');
-        let newText = textBox.value;
-        let h1 = document.getElementById('h1');
-        h1.innerHTML = newText;
     },
-
-    inputDiv : function (event) {
-
-        var newdiv = $('#appdiv');
-        var text = $("#text2").val();
-
-        newdiv.append(text);
+    appendDiv : function(){
+        var divText = document.getElementById("text2");
+        document.getElementById("appdiv").innerText = divText.value;
     },
+    conLog : function() {
 
-    consoleObject: function ()
-    {
         console.log(PageManager);
     },
 
-    updateColor: function (event){
+    bgcolor : function (event) {
+        var storelocal = event.target;
+        localStorage.setItem("background-color",storelocal.value);
 
-        let select = event.target;
-        localStorage.setItem("background-color", select.value);
+        var bgcolor = document.body;
 
-
-        $('body').css("background-color", select.value);
-
-        /*var select = document.getElementById('bgcolor');
-
-        if (select.value ==='white') {
-            select.style.backgroundColor = "white";
-        } else if( select.value ==='red' )
-        {
-            select.style.backgroundColor = "red";
-        }else if( select.value ==='black' )
-        {
-            select.style.backgroundColor = "black";
-        }else if( select.value ==='blue' )
-        {
-            select.style.backgroundColor = "blue";
-        }else{
-
-            select.style.backgroundColor = "green";
-        }*/
-    },
-
-
-
-    clicks : function () {
-        var look = localStorage.getItem('clicker');
-        if (look) === null {
-        localStorage.setItem('clicker', 1);
-    }  if(key in localStorage){
-            var increase = localStorage.getItem("1");
-            localStorage.setItem(increse++);
-            console.log(attempts);
+        if (event.target.value ==='white'){
+            bgcolor.style.backgroundColor = "white";
+        }else if  (event.target.value ==='grey'){
+            bgcolor.style.backgroundColor = "grey";
+        }else if  (event.target.value ==='lavender'){
+            bgcolor.style.backgroundColor = "lavender";
+        }else if  (event.target.value ==='navy'){
+            bgcolor.style.backgroundColor = "navy";
+        }else {
+            bgcolor.style.backgroundColor = "turquoise";
         }
-        $("#showcr").html(look.join('<br>'));
+    },
+    onClicks : function() {
+
+        var look = localStorage.getItem('clicker');
+
+
+        if (!look) {
+            localStorage.setItem("clicker", 1);
+        }else {
+            var i = parseInt(localStorage.getItem("clicker"));
+            localStorage.setItem("i", i++);//If the value is set to an integer, then increment it by 1.
+
+
+        } $('#clicker').on("click", function(){
+            $( '#show' ).append('Clicks :'+i).show();
+        });
+
     }
-
-
-
 
 
 
@@ -113,3 +92,5 @@ PageManager = {
 };
 
 window.onload = PageManager.init;
+
+
