@@ -1,12 +1,12 @@
-var hw8 = {
+var ajax= {
 
     init : function ()
     {
         var readBtn = document.getElementById('readBtn');
-        readBtn.addEventListener('click', hw8.onReadFile);
+        readBtn.addEventListener('click', ajax.onReadFile);
 
         var API = document.getElementById('API');
-        API.addEventListener('click', hw8.onAPIRequest);
+        API.addEventListener('click', ajax.onAPIRequest);
 
 
     },
@@ -42,6 +42,6 @@ var hw8 = {
 
 };
 
-window.onload = hw8.init;
+window.onload = ajax.init;
 
 
