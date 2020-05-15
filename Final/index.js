@@ -7,7 +7,7 @@
  * @category    Final
  * @author      Boram
  * @date        2020.05.12
- * @grade       
+ * @grade       100 / 100
  *
  **/
 
@@ -51,33 +51,33 @@ var pagejs = {
     updateColor : function(event) {
         try {
         // Save The Value
-        let sb = event.target;
-        pagejs.carcolor = sb.value;
+            let sb = event.target;
+            pagejs.carcolor = sb.value;
 
-        localStorage.setItem( "car-color", pagejs.carcolor );
+            localStorage.setItem( "car-color", pagejs.carcolor );
 
-        // Perform Actual Visible Update
-        pagejs.updateDisplay( pagejs.carcolor );
+            // Perform Actual Visible Update
+            pagejs.updateDisplay( pagejs.carcolor );
 
-        //Switch statement to check the color in the pagejs
-        switch(pagejs.carcolor) {
-            case 'white':
-                console.log("White");
-                break;
-            case 'red':
-                console.log("Red");
-                break;
-            case 'blue':
-                console.log("blue");
-                break;
+            //Switch statement to check the color in the pagejs
+            switch(pagejs.carcolor) {
+                case 'white':
+                    console.log("White");
+                    break;
+                case 'red':
+                    console.log("Red");
+                    break;
+                case 'blue':
+                    console.log("blue");
+                    break;
 
-            default :
-               throw new Error;
+                default :
+                   throw new Error;
+            }
+
+        }catch(e){
+            console.error( "Error:", e.message );
         }
-
-    }catch(e){
-        console.error( "Error:", e.message );
-    }
 
     },
     onButtonClick: function()
@@ -88,7 +88,7 @@ var pagejs = {
 
 
         //a line to save the metrics object
-        localStorage.setItem("Name",JSON.stringfy(pagejs.metric) );
+        localStorage.setItem("metrics",JSON.stringify(pagejs.metric) );
     }
 };
 
