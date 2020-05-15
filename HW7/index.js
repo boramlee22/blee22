@@ -1,4 +1,5 @@
 
+// Grade: 10 / 10
 
 var PageManager = {
 

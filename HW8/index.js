@@ -1,3 +1,5 @@
+// Grade: 10 / 10
+
 var HW8= {
 
     init : function ()
